@@ -1,0 +1,14 @@
+version: "3.7"
+
+services:
+  legitly:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: legitly
+    ports:
+      - "8080:8080"
+    restart: on-failure
+    volumes:
+      - .:/app
+
